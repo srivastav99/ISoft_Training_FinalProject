@@ -5,10 +5,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
-
-
-public class TestCasesClass {
-  @Test
+public class TestCasesClassmobile {
+  @Test (priority = 1)
   public void correctmobileTest() {
 	  System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
@@ -20,10 +18,12 @@ public class TestCasesClass {
 		driver.get("https://nxtgenaiacademy.com/demo-site/");
 		
 		PageObjectClass.mobile(driver).sendKeys("2836383732");
+		
+		driver.close();
   }
   
  
-  @Test
+  @Test (priority = 2)
   public void incorrectMobileTest1() {
 	   System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
@@ -35,10 +35,13 @@ public class TestCasesClass {
 		driver.get("https://nxtgenaiacademy.com/demo-site/");
 		
 		PageObjectClass.mobile(driver).sendKeys("32234");
+		
+		driver.close();
   }
   
-  @Test
-  public void incorrectMobileTest3() {
+  
+  @Test (priority = 3)
+  public void incorrectMobileTest2() {
 	   System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
 		ChromeOptions options = new ChromeOptions();
@@ -50,10 +53,13 @@ public class TestCasesClass {
 		
 		PageObjectClass.mobile(driver).sendKeys("28363837324535354");
 		
+		driver.close();
+		
   }
   
-  @Test
-  public void incorrectMobileTest4() {
+  
+  @Test (priority = 4)
+  public void incorrectMobileTest3() {
 	   System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
 		ChromeOptions options = new ChromeOptions();
@@ -65,9 +71,13 @@ public class TestCasesClass {
 		
 		PageObjectClass.mobile(driver).sendKeys("283638sdec");
 		
+		driver.close();
+		
   }
-  @Test
-  public void incorrectMobileTest5() {
+  
+  
+  @Test (priority = 5)
+  public void incorrectMobileTest4() {
 	   System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
 		ChromeOptions options = new ChromeOptions();
@@ -78,6 +88,8 @@ public class TestCasesClass {
 		driver.get("https://nxtgenaiacademy.com/demo-site/");
 		
 		PageObjectClass.mobile(driver).sendKeys("sdfeecjitf");
+		
+		driver.close();
 		
   }
 }

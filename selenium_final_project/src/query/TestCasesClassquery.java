@@ -1,18 +1,13 @@
-package datePicker;
+package query;
 
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
-
-
-
-public class TestCasesClass {
-  @Test
-  public void dodByClick() {
+public class TestCasesClassquery {
+  @Test (priority = 1)
+  public void queryTest() {
 	  System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
 		ChromeOptions options = new ChromeOptions();
@@ -22,19 +17,15 @@ public class TestCasesClass {
 		driver.manage().window().maximize();
 		driver.get("https://nxtgenaiacademy.com/demo-site/");
 		
-		PageObjectClass.dodClick(driver).click();
-		PageObjectClass.dodNext(driver).click();
-		PageObjectClass.dodDay(driver).click();
+		PageObjectClass.query(driver).sendKeys("What is the duration of course.");
 		
-		Actions a = new Actions(driver);
-		a.keyDown(Keys.ENTER).perform();
-		
-		
+		driver.close();
   }
   
-  @Test
-  public void dodByText() {
-	  System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
+ /* 
+  @Test  (priority = 2)
+  public void incorrectTest1() {
+	   System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
@@ -43,16 +34,8 @@ public class TestCasesClass {
 		driver.manage().window().maximize();
 		driver.get("https://nxtgenaiacademy.com/demo-site/");
 		
-		PageObjectClass.dodText(driver).sendKeys("04/05/2023");
-		
-		Actions a = new Actions(driver);
-		a.keyDown(Keys.ENTER).perform();
-		
-		
+		PageObjectClass.firstName(driver).sendKeys("32234");
   }
-  
-
-  
-  
+ */ 
 
 }

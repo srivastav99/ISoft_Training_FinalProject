@@ -1,7 +1,5 @@
 package eMail;
 
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -11,11 +9,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
-
-
-
-public class TestCasesClass {
-  @Test
+public class TestCasesClasseMail {
+  @Test (priority = 1)
   public void correcteMail() {
 	  System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
@@ -28,10 +23,13 @@ public class TestCasesClass {
 		
 		PageObjectClass.eMail(driver).sendKeys("selenium@gmail.com");
 		
+		driver.close();
+		
 
   }
   
-  @Test
+  
+  @Test (priority = 2)
   public void incorrecteMail1() {
 	  System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
@@ -61,9 +59,13 @@ public class TestCasesClass {
 			
 		}
 		
+		driver.close();
+		
 
   }
-  @Test
+  
+  
+  @Test (priority = 3)
   public void incorrecteMail2() {
 	  System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
@@ -90,9 +92,12 @@ public class TestCasesClass {
 			
 		}
 		
+		driver.close();
 
   }
-  @Test
+  
+  
+  @Test (priority = 4)
   public void incorrecteMail3() {
 	  System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
@@ -120,6 +125,7 @@ public class TestCasesClass {
 			
 		}
 		
+		driver.close();
 
   }
   

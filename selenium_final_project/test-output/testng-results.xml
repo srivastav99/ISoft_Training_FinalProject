@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-28T16:53:53 IST" name="Default suite" finished-at="2023-03-28T16:54:03 IST" duration-ms="10214">
+  <suite started-at="2023-03-31T17:06:28 IST" name="Default suite" finished-at="2023-03-31T17:09:48 IST" duration-ms="199341">
     <groups>
     </groups>
-    <test started-at="2023-03-28T16:53:53 IST" name="Default test" finished-at="2023-03-28T16:54:03 IST" duration-ms="10214">
-      <class name="lastName.TestCasesClass">
-        <test-method signature="ltNamecorrectTest()[pri:0, instance:lastName.TestCasesClass@5136d012]" started-at="2023-03-28T16:53:53 IST" name="ltNamecorrectTest" finished-at="2023-03-28T16:54:03 IST" duration-ms="10182" status="PASS">
+    <test started-at="2023-03-31T17:06:28 IST" name="Default test" finished-at="2023-03-31T17:09:48 IST" duration-ms="199341">
+      <class name="main_Calling_Package.Main_Calling_Class">
+        <test-method signature="main_calling_method()[pri:0, instance:main_Calling_Package.Main_Calling_Class@4e268090]" started-at="2023-03-31T17:06:28 IST" name="main_calling_method" finished-at="2023-03-31T17:09:48 IST" duration-ms="199303" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ltNamecorrectTest -->
-      </class> <!-- lastName.TestCasesClass -->
+        </test-method> <!-- main_calling_method -->
+      </class> <!-- main_Calling_Package.Main_Calling_Class -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,16 +1,13 @@
-package query;
+package lastName;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
-
-
-
-public class TestCasesClass {
-  @Test
-  public void queryTest() {
+public class TestCasesClasslastName {
+  @Test (priority = 1)
+  public void ltNamecorrectTest() {
 	  System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
 		ChromeOptions options = new ChromeOptions();
@@ -20,11 +17,14 @@ public class TestCasesClass {
 		driver.manage().window().maximize();
 		driver.get("https://nxtgenaiacademy.com/demo-site/");
 		
-		PageObjectClass.query(driver).sendKeys("What is the duration of course.");
+		PageObjectClass.lastName(driver).sendKeys("Srivastav");
+		
+		driver.close();
   }
- /* 
-  @Test
-  public void incorrectTest1() {
+ 
+  /*
+  @Test (priority = 2)
+  public void ltNameincorrectTest1() {
 	   System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
 		ChromeOptions options = new ChromeOptions();
@@ -34,11 +34,11 @@ public class TestCasesClass {
 		driver.manage().window().maximize();
 		driver.get("https://nxtgenaiacademy.com/demo-site/");
 		
-		PageObjectClass.firstName(driver).sendKeys("32234");
+		PageObjectClass.lastName(driver).sendKeys("32234");
   }
   
-  @Test
-  public void incorrectTest2() {
+  @Test (priority = 3)
+  public void ltNameincorrectTest2() {
 	   System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
 		ChromeOptions options = new ChromeOptions();
@@ -48,6 +48,7 @@ public class TestCasesClass {
 		driver.manage().window().maximize();
 		driver.get("https://nxtgenaiacademy.com/demo-site/");
 		
-		PageObjectClass.firstName(driver).sendKeys("By34");
-  }*/
+		PageObjectClass.lastName(driver).sendKeys("Sri334");
+  }
+  */
 }

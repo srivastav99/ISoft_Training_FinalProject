@@ -5,10 +5,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
-
-
-public class TestCasesClass {
-  @Test
+public class TestCasesClassfirstName {
+  @Test (priority = 1)
   public void ftNamecorrectTest() {
 	  System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
@@ -20,10 +18,12 @@ public class TestCasesClass {
 		driver.get("https://nxtgenaiacademy.com/demo-site/");
 		
 		PageObjectClass.firstName(driver).sendKeys("Byna");
+		
+		driver.close();
   }
   
  /*
-  @Test
+  @Test (priority = 2)
   public void ftNameincorrectTest1() {
 	   System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
@@ -37,7 +37,8 @@ public class TestCasesClass {
 		PageObjectClass.firstName(driver).sendKeys("32234");
   }
   
-  @Test
+  
+  @Test (priority = 3)
   public void ftNameincorrectTest2() {
 	   System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		

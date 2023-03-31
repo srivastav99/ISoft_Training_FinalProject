@@ -1,21 +1,18 @@
 package submit;
 
-import java.time.Duration;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 
-public class TestCasesClass {
+public class TestCasesClasssubmit {
 	
 	
-	 @Test
+	 @Test (priority = 1)
 	  public void SubmitTest() {
 		  System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 			
@@ -28,10 +25,12 @@ public class TestCasesClass {
 			
 			PageObjectClass.submit(driver).click();
 			
+			driver.close();
+			
 	 }
 			
 			
-  @Test
+  @Test (priority = 2)
   public void correctSubmitTest() {
 	  System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
@@ -93,9 +92,12 @@ public class TestCasesClass {
 		else {
 			System.out.println("correctSubmitTest testcase : Fail");
 		}
+		
+		driver.close();
   }
   
-  @Test
+  
+  @Test (priority = 3)
   public void ftNamesubmitTest() {
 	  System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
@@ -125,9 +127,11 @@ public class TestCasesClass {
 			
 		}
 		
+		driver.close();
   }
   
-  @Test
+  
+  @Test (priority = 4)
   public void ltNamesubmitTest() {
 	  System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
@@ -156,9 +160,11 @@ public class TestCasesClass {
 			
 		}
 		
+		driver.close();
   }
   
-  @Test
+  
+  @Test (priority = 5)
   public void gendersubmitTest() {
 	  System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
@@ -189,10 +195,11 @@ public class TestCasesClass {
 			
 		}
 		
+		driver.close();
   }
 
   
-  @Test
+  @Test (priority = 6)
   public void eMailsubmitTest() {
 	  System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
@@ -223,10 +230,12 @@ public class TestCasesClass {
 			System.out.println("eMailsubmitTest testcase : Fail");
 			
 		}
+		driver.close();
 		
   }
   
-  @Test
+  
+  @Test (priority = 7)
   public void verificationsubmitTest() {
 	  System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
@@ -259,10 +268,11 @@ public class TestCasesClass {
 			System.out.println("verificationsubmitTest testcase : Fail");
 			
 		}
-		
+		driver.close();
   }
   
-  @Test
+  
+  @Test (priority = 8)
   public void VerificationFailSubmitTest() {
 	  System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
@@ -324,6 +334,8 @@ public class TestCasesClass {
 		else {
 			System.out.println("VerificationFailSubmitTest testcase : Pass");
 		}
+		
+		driver.close();
   } 
-
+  
 }

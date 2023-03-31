@@ -9,11 +9,11 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
-public class TestCasesClass {
+public class TestCasesClasssetTime {
 	
-  @Test
+  @Test (priority = 1)
   
-  public void dodByClick() {
+  public void setTimeByClick() {
 	  System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
 		ChromeOptions options = new ChromeOptions();
@@ -28,12 +28,13 @@ public class TestCasesClass {
 		PageObjectClass.settimeHr(driver);
 		PageObjectClass.settimeMin(driver);
 		
-		
+		driver.close();
 		
   }
   
-  @Test
-  public void correctdodByText() {
+  
+  @Test (priority = 2)
+  public void correctsetTimeByText() {
 	  System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
 		ChromeOptions options = new ChromeOptions();
@@ -58,10 +59,13 @@ public class TestCasesClass {
 		PageObjectClass.settimeMinText(driver).sendKeys("45");
 		
 		a.keyDown(Keys.ENTER).perform(); 
+		
+		driver.close();
   }		
 
-	@Test
-	public void incorrectdodByTextHr() {
+  
+	@Test (priority = 3)
+	public void incorrectsetTimeByTextHr() {
 			  System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 				
 				ChromeOptions options = new ChromeOptions();
@@ -95,14 +99,15 @@ public class TestCasesClass {
 					System.out.println("incorrectdodByTextHr : Fail");
 				}
 				
+				driver.close();
 	
 		
   }
   
 
   
-	@Test
-	public void incorrectdodByTextMin() {
+	@Test (priority = 4)
+	public void incorrectsetTimeByTextMin() {
 			  System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 				
 				ChromeOptions options = new ChromeOptions();
@@ -137,7 +142,7 @@ public class TestCasesClass {
 					System.out.println("incorrectdodByTextMin : Fail");
 				}
 				
-
+				driver.close();
   }
   
 

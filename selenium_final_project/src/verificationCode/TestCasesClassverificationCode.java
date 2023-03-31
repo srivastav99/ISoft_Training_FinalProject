@@ -7,12 +7,8 @@ import org.testng.annotations.Test;
 
 import submit.PageObjectClass;
 
-
-
-
-
-public class TestCasesClass {
-  @Test
+public class TestCasesClassverificationCode {
+  @Test (priority = 1)
   public void verificationCodeTest() {
 	  System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
@@ -24,9 +20,12 @@ public class TestCasesClass {
 		driver.get("https://nxtgenaiacademy.com/demo-site/");
 		
 		PageObjectClass.verificationCode(driver).sendKeys("99");
+		
+		driver.close();
   }
+  
 
-  @Test
+  @Test (priority = 2)
   public void correctverificationCodeTest() {
 	  System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
@@ -88,10 +87,12 @@ public class TestCasesClass {
 		else {
 			System.out.println("correctverificationCodeTest testcase : Fail");
 		}
+		
+		driver.close();
   }
   
   
-  @Test
+  @Test (priority = 3)
   public void incorrectverificationCodeTest() {
 	  System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
@@ -153,5 +154,7 @@ public class TestCasesClass {
 		else {
 			System.out.println("incorrectverificationCodeTest testcase : Pass");
 		}
+		
+		driver.close();
   } 
 }

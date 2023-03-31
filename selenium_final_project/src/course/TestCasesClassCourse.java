@@ -5,13 +5,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
-
-
-
-
-public class TestCasesClass {
+public class TestCasesClassCourse {
   @Test
-  public void genderTest() {
+  public void courseTest() {
 	  System.setProperty("webdriver.chrome.driver","D:\\selenium drivers,jars\\chromedriver110\\chromedriver.exe");
 		
 		ChromeOptions options = new ChromeOptions();
@@ -36,6 +32,8 @@ public class TestCasesClass {
 		PageObjectClass.courseJava(driver).click();
 		PageObjectClass.courseFunctionalTesting(driver).click();
 		PageObjectClass.courseOthers(driver).click();
+		
+		driver.close();
   }
   
 
